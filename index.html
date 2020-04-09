@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/commom.css"/>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <!--  头部 -->
+    <div class="head"></div>
+    <div class="headEnd">
+        <div class="hendEndCover"></div>
+    </div>
+    <!-- 横幅图片 -->
+    <div class="banner ">
+        <img src="./images/banner.png" >
+    </div>
+    <!-- 链接 -->
+    <div class="image">
+        <ul ><li> <img src="./images/openDoor.png">
+            <span><a href="">开门</a></span> </li>
+        </ul>
+        <ul> <li> <img src="./images/payment.png">
+            <span><a href="">缴费</a></span> </li>
+        </ul>
+        <ul ><li> <img src="./images/repair.png">
+            <span><a href="">报修</a></span> </li>
+        </ul>
+        <ul ><li> <img src="./images/complain.png">
+                <span><a href="">投诉</a></span> </li>
+        </ul>
+    </div>
+    <!-- 分割线 -->
+    <div class="partition"></div>
+    <!-- 内容 -->
+    <div class="content">
+        <div class="title"><h3>热门资讯</h3></div>
+        <div class="news">
+            <ul id="newList"></ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+            $.ajax({
+                type:"GET",
+                url:"./data/data.json",
+                dataType:"json",
+                success:function(data){
+                    $.each(data.result, function(i, n){
+                        $("#newList").append( "<li> <div class='newText'><h3>"+ n.title + "</h3><span class='timeText'>"
+                            + n.time + "</span> <span class='statusText'>" + n.status_DISPLAY + "</span></div><img class='newimg' src='" + n.img + "'></li>");
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

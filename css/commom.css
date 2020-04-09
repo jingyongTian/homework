@@ -1,0 +1,133 @@
+/* 头部 */
+.head{
+    background: #2b6fd5;
+    height: 150px;
+    width: 100%;
+}
+.headEnd{
+    height: 26px;
+    width: 100%;
+    background: #2b6fd5;
+}
+.hendEndCover{
+    height: 26px;
+    width: 100%;
+    border-radius: 28px 28px 0 0;
+    background: #ffffff;
+}
+/* 横幅图片 */
+.banner{
+    position: absolute;
+    margin: 14px 5% auto 5%;
+    width: 90%;
+    height:270px;
+    border-radius: 15px;
+}
+.banner img {
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+}
+/* 链接图片 */
+.image {
+    position: absolute;
+    margin: 280px 5% 0 5%;
+    width:90%;
+    height:100px;
+}
+.image ul li {
+    width: 25%;
+    padding-top: 4%;
+    float: left;
+    text-align: center;
+}
+.image ul li img {
+    height: 50px;
+    width: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+/* 图片文字 */
+.image ul li span {
+    display: block;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.image ul li span a{
+    color: black;
+}
+/* 分割 */
+.partition{
+    margin-top: 450px;
+    widows: 100%;
+    height: 24px;
+    background: #f8f8fa;
+}
+
+/* 内容 */
+.content {
+    padding: 0 15px;
+}
+
+/* 标题 */
+.title {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+/* 大标题文字样式 */
+.title h3 {
+    font-weight: 700;
+}
+
+/* 新闻列表 */
+.news ul li {
+    height: 80px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* 新闻文字部分 */
+.newText {
+    height: 60px;
+    width: 70%;
+    float: left;
+    margin: 10px 0;
+
+}
+
+/* 新闻标题 */
+.newText h3 {
+    width: 90%;
+    overflow: hidden;
+    text-overfow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 17px;
+    color: #656565;
+}
+
+.newText span {
+    white-space:nowrap;
+    padding: 20px 40px 0 0;
+    font-size: 13px;
+    color: #6D6D6D;
+}
+
+/* 时间 */
+.timeText {
+    float: left;
+}
+
+/* 状态 */
+.statusText {
+    float: right;
+}
+
+/* 新闻图片 */
+.newimg {
+    width: 30%;
+    height: 80px;
+    float: left;
+}
